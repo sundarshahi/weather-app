@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { DateTime } from "luxon";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -5,7 +6,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const getWeatherData = (searchParams: Record<string, unknown>) => {
   const url = new URL(BASE_URL);
-  url.search = new URLSearchParams({ ...searchParams, key: API_KEY });
+  url.search = new URLSearchParams({ ...searchParams, key: API_KEY }) as any;
 
   return fetch(url).then((res) => res.json());
 };
