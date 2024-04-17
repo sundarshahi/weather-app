@@ -5,6 +5,7 @@ import { WiSunrise } from "react-icons/wi";
 import { TbSunset2 } from "react-icons/tb";
 import { formatToLocalTime } from "../services/weatherService";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function CurrentWeather({ weather }: any) {
   const {
     location: { name, country, tz_id, localtime_epoch },

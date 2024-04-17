@@ -1,4 +1,6 @@
-function Forecast({ title, items }) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function Forecast({ title, items }: any) {
   return (
     <div>
       <div className="flex items-center justify-start mt-6">

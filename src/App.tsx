@@ -12,6 +12,7 @@ function App() {
   const [isfetching, setIsFetching] = useState(false);
   const [query, setQuery] = useState({ q: "berlin" });
   const [units, setUnits] = useState("metric");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [weather, setWeather] = useState<any>(null);
 
   useEffect(() => {

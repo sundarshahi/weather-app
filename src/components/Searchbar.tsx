@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { RiSearchLine } from "react-icons/ri";
 import { TbCurrentLocation } from "react-icons/tb";
@@ -6,7 +7,7 @@ import { toast } from "react-toastify";
 function Inputs({ setQuery, units, setUnits }: any) {
   const [city, setCity] = useState("");
 
-  const handleUnitsChange = (e) => {
+  const handleUnitsChange = (e: any) => {
     const selectedUnit = e.currentTarget.name;
     if (units !== selectedUnit) setUnits(selectedUnit);
   };
